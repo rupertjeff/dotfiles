@@ -1,0 +1,2 @@
+source ~/projects/dotfiles/.zshrc
+

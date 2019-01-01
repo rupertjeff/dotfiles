@@ -1,0 +1,19 @@
+source $(brew --prefix zplug)/init.zsh
+
+zplug "walesmd/caniuse.plugin.zsh"
+zplug "zdharma/zsh-diff-so-fancy", as:command, use:bin/git-dsf
+zplug "zackintosh/fixnumpad-osx.plugin.zsh"
+zplug "marzocchi/zsh-notify"
+zplug "zlsun/solarized-man"
+zplug "MichaelAquilina/zsh-you-should-use"
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "nviennot/zsh-vim-plugin"
+
+zplug "zdharma/fast-syntax-highlighting", defer:2
+
+if ! zplug check --verbose; then
+    echo; zplug install
+fi
+
+zplug load
+
