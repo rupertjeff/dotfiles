@@ -4,7 +4,8 @@ brew "git"
 brew "vim"
 brew "zsh"
 brew "zplug"
-brew "yarn", args: ["without-node"]
+brew "python"
+#brew "yarn", args: ["without-node"]
 
 cask "font-sourcecodepro-nerd-font"
 
@@ -17,4 +18,7 @@ cask "intellij-idea"
 cask "slack"
 cask "docker"
 cask "moom"
+cask "alfred"
+cask "spotify"
+cask "insomnia"
 

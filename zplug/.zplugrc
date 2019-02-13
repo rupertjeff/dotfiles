@@ -8,6 +8,7 @@ zplug "zlsun/solarized-man"
 zplug "MichaelAquilina/zsh-you-should-use"
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "nviennot/zsh-vim-plugin"
+zplug "lib/history", from:oh-my-zsh
 
 zplug "zdharma/fast-syntax-highlighting", defer:2
 

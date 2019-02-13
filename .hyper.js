@@ -14,8 +14,23 @@ module.exports = {
     // font family with optional fallbacks
     fontFamily: '"SauceCodePro Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
+    // default font weight: 'normal' or 'bold'
+    fontWeight: 'normal',
+
+    // font weight for bold characters: 'normal' or 'bold'
+    fontWeightBold: 'bold',
+
+    // line height as a relative unit
+    lineHeight: 1,
+
+    // letter spacing as a relative unit
+    letterSpacing: 0,
+
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: '#839496',
+
+    // terminal text color under BLOCK cursor
+    cursorAccentColor: '#000',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
@@ -27,7 +42,11 @@ module.exports = {
     foregroundColor: '#839496',
 
     // terminal background color
+    // opacity is only supported on macOS
     backgroundColor: 'rgba(0, 40, 51, 0.8)',
+
+    // terminal selection color
+    selectionColor: 'rgba(248,28,229,0.3)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -98,6 +117,9 @@ module.exports = {
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: true,
+
+    // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
+    defaultSSHApp: true,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
