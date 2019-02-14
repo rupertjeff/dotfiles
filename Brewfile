@@ -21,4 +21,5 @@ cask "moom"
 cask "alfred"
 cask "spotify"
 cask "insomnia"
+cask "visual-studio-code"
 
