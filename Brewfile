@@ -5,6 +5,7 @@ brew "vim"
 brew "zsh"
 brew "zplug"
 brew "python"
+brew "terraform"
 #brew "yarn", args: ["without-node"]
 
 cask "font-sourcecodepro-nerd-font"
