@@ -1,4 +1,4 @@
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 
 brew "git"
 brew "vim"
@@ -6,7 +6,7 @@ brew "zsh"
 brew "zplug"
 brew "python"
 brew "terraform"
-#brew "yarn", args: ["without-node"]
+brew "yarn", args: ["ignore-dependencies"]
 
 cask "font-sourcecodepro-nerd-font"
 
