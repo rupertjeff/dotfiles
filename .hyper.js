@@ -103,7 +103,7 @@ module.exports = {
     //
     // Powershell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: '/usr/local/bin/zsh',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
@@ -111,6 +111,8 @@ module.exports = {
 
     // for environment variables
     env: {},
+
+    scrollback: 1000000,
 
     // set to false for no bell
     bell: 'SOUND',

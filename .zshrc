@@ -1,4 +1,4 @@
-export DEFAULT_USER=rupertjeff
+export DEFAULT_USER=jrupert
 
 # https://github.com/willghatch/zsh-saneopt/blob/master/saneopt.plugin.zsh
 setopt auto_cd
@@ -6,11 +6,7 @@ setopt auto_cd
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-source $0:a:h/.promptrc
-source $0:a:h/zplug/.zplugrc
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
 alias ll='ls -AlhF'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
