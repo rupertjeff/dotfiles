@@ -1,32 +1,33 @@
-# Install basics
+# Make sure XCode CLI Tools exist!
+xcode-select —install
 
 # Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Put rc files into the correct spot
-cp $0/.zshrc ~/.zshrc
-cp $0/.zimrc ~/.zimrc
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install needed packages
 brew bundle
 
-zsh
-
 # Set up ZSH
-git clone --recursive https://github.com/zimfw/zimfw.git ${ZDOTDIR:-${HOME}}/.zim
-for template_file in ${ZDOTDIR:-${HOME}}/.zim/templates/*; do
-  user_file="${ZDOTDIR:-${HOME}}/.${template_file:t}"
-  cat ${template_file} ${user_file}(.N) > ${user_file}.tmp && mv ${user_file}{.tmp,}
-done
-source ${ZDOTDIR:-${HOME}}/.zlogin
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+
+zsh
+echo "zmodule eriner" >> ~/.zimrc
+zimfw install
 
 # Set ZSH as default shell
 chsh -s /usr/local/bin/zsh
 
-# Set up node
+# Set up aliases
+echo 'alias ll="ls -Alh"' >> ~/.zshrc
 
-n 10
+# Node & fnm
+echo 'eval "$(fnm env)"' >> ~/.zshrc
+eval "$(fnm env)"
+fnm install --lts
+
+# RVM
+curl -sSL https://get.rvm.io | bash -s stable
+rvm install ruby --latest
 
 echo "Restart to get ZSH set as default shell."
 echo;
-
