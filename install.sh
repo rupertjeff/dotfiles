@@ -25,9 +25,10 @@ echo 'eval "$(fnm env)"' >> ~/.zshrc
 eval "$(fnm env)"
 fnm install --lts
 
-# RVM
-curl -sSL https://get.rvm.io | bash -s stable
-rvm install ruby --latest
+# rbenv
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+rbenv init -
+rbenv install $(rbenv install -l | grep -v - | tail -1)
 
 echo "Restart to get ZSH set as default shell."
 echo;

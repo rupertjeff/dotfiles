@@ -5,6 +5,7 @@ brew "vim"
 brew "zsh"
 brew "fnm"
 brew "yarn", args: ["ignore-dependencies"]
+brew "rbenv"
 
 cask "font-sauce-code-pro-nerd-font"
 
